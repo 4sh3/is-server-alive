@@ -40,7 +40,7 @@ const TelegramBot = require('node-telegram-bot-api');
     then write something to your bot chat from your telegram, 
     then your chatId will appear on the shell.
     
-    If you catch some error please contact me via LinkedIn, I will help you.
+    If you catch some error please contact me via LinkedIn, I will try to help you ;)
 */
 const chatId = 'INTRODUCE_YOUR_CHAT_ID'; // <------- 
 const token = 'INTRODUCE_YOUR_BOT_TOKEN_HERE'; // <------- 
