@@ -1,6 +1,6 @@
 {
-  "name": "keepalive",
-  "version": "1.0.0",
+  "name": "is-server-alive",
+  "version": "1.0.2",
   "description": "Check if the server is alive",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,11 @@
     "monit": "pm2 monit",
     "kill": "pm2 kill"
   },
-  "author": "",
+  "author": "Jordi Piqueras",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4sh3/is-server-alive"
+  },
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.3.1",

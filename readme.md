@@ -1,4 +1,4 @@
-# isAlive
+# is-server-alive
 This packages identify if a server is alive and can check if a service is running on this server doing a request that you have to configure easily, for example with fetch-node module, just follow the instructions.
 
 ![alt text](https://image.prntscr.com/image/3HIyQBc-TLey8zHgsLBq6Q.png)
@@ -12,7 +12,7 @@ LinkedIn: https://www.linkedin.com/in/jordi-piqueras-50b439b9/
 First of all you need to install node.js and npm to run this code. You can do it on a Linux, MacOs, Windows even in your mobile phone like me.
 
 ## How to Install
-npm install isAlive
+npm install is-server-alive
 
 ## Before use it
 Before use it you need to create a Telegram bot, follow the instructions.
