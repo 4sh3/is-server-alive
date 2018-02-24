@@ -26,7 +26,7 @@ Before use it you need to create a Telegram bot, follow the instructions.
 7. Use the code of showMyChatId to get your chatId, while is executing then write something to the bot, this will show you a message with your id, put it on the code.
 
 ```js
-const showMyChatId = require('../is-server-alive').showMyChatId
+const showMyChatId = require('is-server-alive').showMyChatId
 
 const token = 'INTRODUCE_YOUR_BOT_TOKEN_HERE'
 
@@ -35,7 +35,7 @@ showMyChatId(token)
 
 ## How to use the API
 ```js
-const isServerAlive = require('../is-server-alive').isServerAlive
+const isServerAlive = require('is-server-alive').isServerAlive
 
 const config = {
     token: 'INTRODUCE_YOUR_BOT_TOKEN_HERE',
