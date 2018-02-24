@@ -1,9 +1,11 @@
 # isAlive
 This packages identify if a server is alive and can check if a service is running on this server doing a request that you have to configure easily, for example with fetch-node module, just follow the instructions.
 
-> Welcome to my repository, you can help me validating my aptitudes on LinkedIn.
+
 
 ## Author: Jordi Piqueras.
+> Welcome to my repository, you can help me validating my aptitudes on LinkedIn.
+
 LinkedIn: https://www.linkedin.com/in/jordi-piqueras-50b439b9/
 
 ## Pre-requisites
