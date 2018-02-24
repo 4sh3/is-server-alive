@@ -4,7 +4,7 @@ This packages identify if a server is alive and can check if a service is runnin
 > Welcome to my repository, you can help me validating my aptitudes on LinkedIn.
 
 # Author: Jordi Piqueras.
-# LinkedIn: https://www.linkedin.com/in/jordi-piqueras-50b439b9/
+LinkedIn: https://www.linkedin.com/in/jordi-piqueras-50b439b9/
 
 # Pre-requisites
 First of all you need to install node.js and npm to run this code. You can do it on a Linux, MacOs, Windows even in your mobile phone like me.
