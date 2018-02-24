@@ -61,7 +61,10 @@ const options = {
     extra: ["-i 2"], 
 };
 
-// Interval of the request against the server. Recommended 60 Seconds, don't be banned, remember that some firewalls block this type of ICMP request.
+/*
+Interval of the request against the server. Recommended 60 Seconds.
+Try to not be banned, remember that some firewalls block this type of ICMP request.
+*/
 const intervalTimeout = 60000; 
 
 async function isAlive() {
