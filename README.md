@@ -58,15 +58,13 @@ const options = {
     extra: ["-i 2"], 
 };
 
-// Interval of the petitions against the server. Recommended 60 Seconds, don't be banned, remember that some firewalls block this type of ICMP request.
+// Interval of the request against the server. Recommended 60 Seconds, don't be banned, remember that some firewalls block this type of ICMP request.
 const intervalTimeout = 60000; 
 
 async function isAlive() {
     try {
         targets.forEach(function (host) {
             ping.promise.probe(host, options).then(function (res) {
-                // console.log(res)
-                // sendMessage(res)
                 if (res.alive == false) sendMessage(res)
             });
             // Here you can ADD more methods like GET/POST request to test your service using fetch-node
@@ -80,7 +78,6 @@ setInterval(isAlive, intervalTimeout)
 
 function sendMessage(res) {
     try {
-        // console.log(res)
         bot.sendMessage(chatId, "The Host: [" + res.host + "] with IP [" + res.numeric_host + "] is NOT Alive.")
     } catch (err) {
         handleFatalError(err)
