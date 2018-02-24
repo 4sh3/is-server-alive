@@ -127,7 +127,7 @@ npm run kill
 ```
 
 # Community
-Packages used on my code
+I give thanks to the community of GitHub, niiiiiiiiiice:
 * node-telegram-bot-api: https://github.com/yagop/node-telegram-bot-api
 * Ping: https://github.com/danielzzz/node-ping
 * P2m:
