@@ -1,7 +1,7 @@
 # isAlive
 This packages identify if a server is alive and can check if a service is running on this server doing a request that you have to configure easily, for example with fetch-node module, just follow the instructions.
 
-![alt text](http://prntscr.com/ijacvx)
+![alt text](https://image.prntscr.com/image/3HIyQBc-TLey8zHgsLBq6Q.png)
 
 ## Author: Jordi Piqueras.
 > Welcome to my repository, you can help me validating my aptitudes on LinkedIn.
@@ -97,26 +97,38 @@ function handleFatalError(err) {
 }
 ```
 
-After complete the information you can use this commands:
+# Execute and Monit
+After complete the information you can use this commands.
 
 Noob command to run the software
 ```js 
 node index.js
 ```
 
-Pro command to run the software on the background, also you can monit your code
+Pro command to run the software on the background.
 ```js 
 npm run start
+```
+
+You can monit your code.
+```js 
 npm run monit
 ```
 
-Check the status of the software (Not kill other process we are using pm2)
+Check the status (Not kill other process we are using pm2).
 ```js 
 npm run status
 ```
 
-Stop Execution
+Stop Execution.
 ```js 
 npm run stop
 npm run kill
 ```
+
+# Community
+Packages used on my code
+* node-telegram-bot-api: https://github.com/yagop/node-telegram-bot-api
+* Ping: https://github.com/danielzzz/node-ping
+* P2m:
+* Telegram API: https://core.telegram.org/ 
