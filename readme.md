@@ -54,16 +54,15 @@ isServerAlive(config)
 # Execute and Monit
 After complete the information of your bot/chat install pm2 and prepare for monit your aplication:
 
-![alt text](https://image.prntscr.com/image/3HIyQBc-TLey8zHgsLBq6Q.png)
 
 ```js 
 npm install pm2
 ```
 
-Put this in your dependencies:
+You can put this scripts on your package.json:
 ```js 
 "scripts": {
-    "start": "pm2 start your_file_name",
+    "start": "pm2 start your_file",
     "stop": "pm2 stop your_file_name",
     "status": "pm2 status",
     "list": "pm2 list",
@@ -71,6 +70,9 @@ Put this in your dependencies:
     "kill": "pm2 kill"
 }
 ```
+
+![alt text](https://image.prntscr.com/image/3HIyQBc-TLey8zHgsLBq6Q.png)
+
 
 # Community
 I give an special mention to the GitHub community:
