@@ -42,7 +42,7 @@ const TelegramBot = require('node-telegram-bot-api');
     
     If you catch some error please contact me via LinkedIn, I will help you.
 */
-const chatId = 'INTRODUCE_YOUR_CHAT_ID'; // <------- More info on the readme.md (Before use it)
+const chatId = 'INTRODUCE_YOUR_CHAT_ID'; // <------- 
 const token = 'INTRODUCE_YOUR_BOT_TOKEN_HERE'; // <------- 
 const bot = new TelegramBot(token, {
     polling: true
