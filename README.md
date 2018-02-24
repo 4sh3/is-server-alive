@@ -3,7 +3,7 @@ This packages identify if a server is alive and can check if a service is runnin
 
 > Welcome to my repository, you can help me validating my aptitudes on LinkedIn.
 
-Author: Jordi Piqueras.
+## Author: Jordi Piqueras.
 LinkedIn: https://www.linkedin.com/in/jordi-piqueras-50b439b9/
 
 ## Pre-requisites
