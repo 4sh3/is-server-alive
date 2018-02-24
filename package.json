@@ -1,12 +1,13 @@
 {
   "name": "is-server-alive",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Check if the server is alive",
-  "main": "index.js",
+  "main": "is-server-alive",
   "scripts": {
-    "start-dev": "node index.js",
-    "start": "pm2 start index.js",
-    "stop": "pm2 stop index",
+    "test-server": "node test/test-is-server-alive.js",
+    "test-chatid": "node test/test-show-my-chat-id.js",
+    "start": "pm2 start test/is-server-alive.js",
+    "stop": "pm2 stop is-server-alive",
     "status": "pm2 status",
     "list": "pm2 list",
     "monit": "pm2 monit",

@@ -21,79 +21,34 @@ Before use it you need to create a Telegram bot, follow the instructions.
 2. On your Telegram App clic the magnifying glass to search a user and write: @botfather
 3. Go to the chat and use commands with the slash symbol / to execute it
 4. Create a new bot: /newbot 
-5. Store the token and put it on the code showMyChatId.js and index.js.
+5. Store the token on your config value.
 6. Install the code with npm install.
-7. Execute the file showMyChatId.js and while is executing then write something to the bot, this will show you a message with your id, put it on the code.
+7. Use the code of showMyChatId to get your chatId, while is executing then write something to the bot, this will show you a message with your id, put it on the code.
+
 ```js
-node showMyChatId.js
+const showMyChatId = require('../is-server-alive').showMyChatId
+
+const token = 'INTRODUCE_YOUR_BOT_TOKEN_HERE'
+
+showMyChatId(token)
 ```
 
-## API How To Use It
-
-Complete the information before use it:
-
+## How to use the API
 ```js
-process.env["NTBA_FIX_319"] = 1
-const ping = require('ping')
-const TelegramBot = require('node-telegram-bot-api');
+const isServerAlive = require('../is-server-alive').isServerAlive
 
-/* 
-    To see your chat id you have to create your bot, 
-    then execute the testChatId.js file, 
-    then write something to your bot chat from your telegram, 
-    then your chatId will appear on the shell.
-    
-    If you catch some error please contact me via LinkedIn, I will try to help you ;)
-*/
-const chatId = 'INTRODUCE_YOUR_CHAT_ID'; // <------- 
-const token = 'INTRODUCE_YOUR_BOT_TOKEN_HERE'; // <------- 
-const bot = new TelegramBot(token, {
-    polling: true
-});
-
-// Array of strings: Domains and URLs
-const targets = ['google.com', '176.103.56.98']
-
-// Time to wait for the ping response. Recommended: 5.
-// Number of ping petitions. Recommended 2.
-const options = {
-    timeout: 5, 
-    extra: ["-i 2"], 
-};
-
-/*
-    Interval of the request against the server. Recommended 60 Seconds.
-    Try to not be banned, remember that some firewalls block this type of ICMP request.
-*/
-const intervalTimeout = 60000; 
-
-async function isAlive() {
-    try {
-        targets.forEach(function (host) {
-            ping.promise.probe(host, options).then(function (res) {
-                if (res.alive == false) sendMessage(res)
-            });
-            // Here you can ADD more methods like GET/POST request to test your service using fetch-node
-        })
-    } catch (err) {
-        handleFatalError(err)
-    }
+const config = {
+    token: 'INTRODUCE_YOUR_BOT_TOKEN_HERE',
+    chatId: INTRODUCE_YOUR_CHAT_ID,
+    targets: ['google.com', '121.113.113.41'], // Array of strings: Domains and URLs
+    options: {
+        timeout: 5, // Time to wait for the ping response.
+        extra: ["-i 2"], // Number of ping petitions.
+    },
+    intervalTimeout: 5000,  // Interval of the request against the server. 5000 -> 5 seconds.
 }
 
-setInterval(isAlive, intervalTimeout)
-
-function sendMessage(res) {
-    try {
-        bot.sendMessage(chatId, "The Host: [" + res.host + "] with IP [" + res.numeric_host + "] is NOT Alive.")
-    } catch (err) {
-        handleFatalError(err)
-    }
-}
-
-function handleFatalError(err) {
-    console.error(`${chalk.red('[fatal error]')} ${err.message}`)
-    console.error(err.stack)
-}
+isServerAlive(config)
 ```
 
 # Execute and Monit
@@ -101,7 +56,7 @@ After complete the information you can use this commands.
 
 Noob command to run the software
 ```js 
-node index.js
+npm run test
 ```
 
 Pro command to run the software on the background.
