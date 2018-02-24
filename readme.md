@@ -1,7 +1,7 @@
 # is-server-alive
 This packages identify if a server is alive and can check if a service is running on this server doing a request that you have to configure easily, for example with fetch-node module, just follow the instructions.
 
-![alt text](https://image.prntscr.com/image/3HIyQBc-TLey8zHgsLBq6Q.png)
+
 
 ## Author: Jordi Piqueras.
 > Welcome to my repository, you can help me validating my aptitudes on LinkedIn.
@@ -45,39 +45,31 @@ const config = {
         timeout: 5, // Time to wait for the ping response.
         extra: ["-i 2"], // Number of ping petitions.
     },
-    intervalTimeout: 5000,  // Interval of the request against the server. 5000 -> 5 seconds.
+    intervalTimeout: 5000, // Interval of the request against the server.
 }
 
 isServerAlive(config)
 ```
 
 # Execute and Monit
-After complete the information you can use this commands.
+After complete the information of your bot/chat install pm2 and prepare for monit your aplication:
 
-Noob command to run the software
+![alt text](https://image.prntscr.com/image/3HIyQBc-TLey8zHgsLBq6Q.png)
+
 ```js 
-npm run test
+npm install pm2
 ```
 
-Pro command to run the software on the background.
+Put this in your dependencies:
 ```js 
-npm run start
-```
-
-You can monit your code. To stop it use: control+c
-```js 
-npm run monit
-```
-
-Check the status (Not kill other process we are using pm2).
-```js 
-npm run status
-```
-
-Stop Execution.
-```js 
-npm run stop
-npm run kill
+"scripts": {
+    "start": "pm2 start your_file_name",
+    "stop": "pm2 stop your_file_name",
+    "status": "pm2 status",
+    "list": "pm2 list",
+    "monit": "pm2 monit",
+    "kill": "pm2 kill"
+}
 ```
 
 # Community
