@@ -19,8 +19,8 @@ module.exports = {
             try {
                 targets.forEach(function (host) {
                     ping.promise.probe(host, options).then(function (res) {
-                        if (res.alive != true) sendMessagePromise(host, res)
-                    });
+                        if (res.alive == false) sendMessagePromise(host, res)
+                    })
                     // ping.sys.probe(host, function (isAlive) {
                     //     if (isAlive != true) sendMessage(host, isAlive)
                     // }, options);
@@ -33,7 +33,7 @@ module.exports = {
 
         setInterval(isAlive, intervalTimeout)
 
-        function sendMessagePromise(host, isAlive) {
+        function sendMessagePromise(host, res) {
             try {
                 console.log("The Host: [" + host + "] with IP [" + res.numeric_host + "] is NOT Alive. " + new Date())
                 bot.sendMessage(chatId, "The Host: [" + host + "] with IP [" + res.numeric_host + "] is NOT Alive. " + new Date())
