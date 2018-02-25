@@ -1,7 +1,7 @@
 # is-server-alive
 This packages identify if a server is alive and can check if a service is running on this server doing a request that you have to configure easily, for example with fetch-node module, just follow the instructions.
 
-
+![alt text](https://image.prntscr.com/image/PwA2Am8BQhiV2Yzbpxsv8g.png)
 
 ## Author: Jordi Piqueras.
 > Welcome to my repository, you can help me validating my aptitudes on LinkedIn.
@@ -70,9 +70,6 @@ You can put this scripts on your package.json:
     "kill": "pm2 kill"
 }
 ```
-
-![alt text](https://image.prntscr.com/image/3HIyQBc-TLey8zHgsLBq6Q.png)
-
 
 # Community
 I give an special mention to the GitHub community:

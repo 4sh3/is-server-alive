@@ -1,6 +1,7 @@
 process.env["NTBA_FIX_319"] = 1
 const ping = require('ping')
 const TelegramBot = require('node-telegram-bot-api');
+const chalk = require('chalk')
 
 module.exports = {
     isServerAlive: function isServerAlive(config) {
@@ -18,7 +19,7 @@ module.exports = {
             try {
                 targets.forEach(function (host) {
                     ping.promise.probe(host, options).then(function (res) {
-                        if (res.alive == false) sendMessage(res)
+                        if (res.alive == false) sendMessage(host, res)
                     });
                 })
             } catch (err) {
@@ -28,9 +29,10 @@ module.exports = {
 
         setInterval(isAlive, intervalTimeout)
 
-        function sendMessage(res) {
+        function sendMessage(host, res) {
             try {
-                bot.sendMessage(chatId, "The Host: [" + res.host + "] with IP [" + res.numeric_host + "] is NOT Alive.")
+                console.log("The Host: [" + host + "] with IP [" + res.numeric_host + "] is NOT Alive." + new Date())
+                bot.sendMessage(chatId, "The Host: [" + host + "] with IP [" + res.numeric_host + "] is NOT Alive." + new Date())
             } catch (err) {
                 handleFatalError(err)
             }
