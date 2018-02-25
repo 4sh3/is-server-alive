@@ -19,8 +19,12 @@ module.exports = {
             try {
                 targets.forEach(function (host) {
                     ping.promise.probe(host, options).then(function (res) {
-                        if (res.alive == false) sendMessage(host, res)
+                        if (res.alive != true) sendMessagePromise(host, res)
                     });
+                    // ping.sys.probe(host, function (isAlive) {
+                    //     if (isAlive != true) sendMessage(host, isAlive)
+                    // }, options);
+                    // Add here your code to check if your service is alive, may be using fetch-node or something similar.
                 })
             } catch (err) {
                 handleFatalError(err)
@@ -29,10 +33,19 @@ module.exports = {
 
         setInterval(isAlive, intervalTimeout)
 
-        function sendMessage(host, res) {
+        function sendMessagePromise(host, isAlive) {
             try {
-                console.log("The Host: [" + host + "] with IP [" + res.numeric_host + "] is NOT Alive." + new Date())
-                bot.sendMessage(chatId, "The Host: [" + host + "] with IP [" + res.numeric_host + "] is NOT Alive." + new Date())
+                console.log("The Host: [" + host + "] with IP [" + res.numeric_host + "] is NOT Alive. " + new Date())
+                bot.sendMessage(chatId, "The Host: [" + host + "] with IP [" + res.numeric_host + "] is NOT Alive. " + new Date())
+            } catch (err) {
+                handleFatalError(err)
+            }
+        }
+
+        function sendMessage(host, isAlive) {
+            try {
+                console.log("The Host: [" + host + "] is NOT Alive. " + new Date())
+                bot.sendMessage(chatId, "The Host: [" + host + "] is NOT Alive. " + new Date())
             } catch (err) {
                 handleFatalError(err)
             }
