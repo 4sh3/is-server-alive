@@ -1,6 +1,7 @@
 # is-server-alive
 This packages identify if a server is alive and can check if a service is running on this server doing a request that you have to configure easily, for example with fetch-node module, just follow the instructions.
 
+![alt text](https://image.prntscr.com/image/yh01qlt-SoesrBcZMVAqVA.png)
 ![alt text](https://image.prntscr.com/image/PwA2Am8BQhiV2Yzbpxsv8g.png)
 
 ## Author: Jordi Piqueras.
